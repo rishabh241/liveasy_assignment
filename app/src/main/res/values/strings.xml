@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Liveasy_assignment</string>
+    <string name="m_enterNumber">Please enter your mobile number</string>
+    <string name="m_otp_instruc">You’ll receive a 6 digit code\nto verify next.</string>
+    <string name="m_continue">CONTINUE</string>
+    <string name="o_verify_phone">Verify Phone</string>
+    <string name="o_code_sent">Code is sent to </string>
+    <string name="o_not_receive">Didn’t receive the code?</string>
+    <string name="o_verify">VERIFY AND CONTINUE</string>
+
+</resources>

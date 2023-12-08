@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Otp">
+
+
+    <com.mukeshsolanki.OtpView
+        android:id="@+id/otp1"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="156dp"
+        android:inputType="number"
+        android:padding="4dp"
+        app:OtpItemCount="6"
+        app:OtpItemSpacing="6dp"
+        app:OtpLineColor="@color/black"
+        app:OtpState_filled="true"
+        app:OtpViewType="rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Verify"
+        app:layout_constraintEnd_toEndOf="@+id/otp1"
+        app:layout_constraintStart_toStartOf="@+id/otp1"
+        app:layout_constraintTop_toBottomOf="@+id/otp1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

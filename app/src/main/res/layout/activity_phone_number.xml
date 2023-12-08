@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".phone_number">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/baseline_close_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/m_enterNumber"
+        android:textSize="20sp"
+        android:letterSpacing="0"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:letterSpacing="0.01"
+        android:text="@string/m_otp_instruc"
+        android:textAlignment="center"
+        android:textColor="#6A6C7B"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/number"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="32dp"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/india"
+        android:drawablePadding="10dp"
+        android:text="+91"
+        android:maxLength="13"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"
+        android:background="@drawable/edit_bg"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/get_otp_btn"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_bg"
+        android:text="Get Otp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/number"
+        app:layout_constraintStart_toStartOf="@+id/number"
+        app:layout_constraintTop_toBottomOf="@+id/number" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
