@@ -32,6 +32,7 @@ class Otp : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         val storedVerificationId = intent.getStringExtra("number").toString()
+        val number = intent.getStringExtra("number1").toString()
 
 //        binding.otp1.setText("")
 //        binding.otp1.setOtpCompletionListener(object : OnOtpCompletionListener
@@ -52,6 +53,7 @@ class Otp : AppCompatActivity() {
 //                inn1.hideSoftInputFromWindow(it.windowToken,0)
 //            }
 //        }
+        binding.textView5.setText("Code is sent to ${number}")
         binding.verify.setOnClickListener {
 //            var otp=otpGiven.text.toString().trim()
             var otp = binding.otp1.text.toString().trim()
@@ -66,6 +68,7 @@ class Otp : AppCompatActivity() {
 
     }
 
+
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
@@ -78,6 +81,7 @@ class Otp : AppCompatActivity() {
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {
 // The verification code entered was invalid
                         Toast.makeText(this,"Invalid OTP",Toast.LENGTH_SHORT).show()
+                        binding.otp1.setText("")
                     }
                 }
             }

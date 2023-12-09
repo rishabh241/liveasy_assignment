@@ -7,31 +7,79 @@
     android:background="@color/white"
     tools:context=".Otp">
 
-
-    <com.mukeshsolanki.OtpView
-        android:id="@+id/otp1"
+    <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginTop="156dp"
-        android:inputType="number"
-        android:padding="4dp"
-        app:OtpItemCount="6"
-        app:OtpItemSpacing="6dp"
-        app:OtpLineColor="@color/black"
-        app:OtpState_filled="true"
-        app:OtpViewType="rectangle"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/roboto_medium"
+        android:letterSpacing="0"
+        android:textColor="#000000"
+        android:text="@string/o_verify_phone"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/verify"
+    <TextView
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="Verify"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/o_code_sent"
+        android:textColor="#6A6C7B"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <com.mukeshsolanki.OtpView
+        android:id="@+id/otp1"
+        style="@style/OtpWidget.OtpView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:inputType="number"
+        android:padding="4dp"
+        app:OtpItemCount="6"
+        android:itemBackground="#93D2F3"
+        app:OtpItemSpacing="6dp"
+        app:OtpItemHeight="48dp"
+        app:OtpItemWidth="48dp"
+        app:OtpItemRadius="4dp"
+        android:textColor="@color/black"
+        app:OtpState_filled="true"
+        app:OtpViewType="rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/o_not_receive"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/otp1"
         app:layout_constraintStart_toStartOf="@+id/otp1"
         app:layout_constraintTop_toBottomOf="@+id/otp1" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/verify"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/o_verify"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto"
+        android:background="@drawable/btn_bg"
+        app:layout_constraintEnd_toEndOf="@+id/otp1"
+        app:layout_constraintStart_toStartOf="@+id/otp1"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

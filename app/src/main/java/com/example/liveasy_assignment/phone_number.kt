@@ -1,9 +1,11 @@
 package com.example.liveasy_assignment
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import com.example.liveasy_assignment.databinding.ActivityPhoneNumberBinding
 import com.google.firebase.FirebaseException
@@ -25,8 +27,6 @@ class phone_number : AppCompatActivity() {
         binding = ActivityPhoneNumberBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = FirebaseAuth.getInstance()
-
-//        val number:String = binding.number.text.toString()
 
         var currentUser = auth.currentUser
         if(currentUser != null) {
@@ -59,6 +59,7 @@ class phone_number : AppCompatActivity() {
 
                 var intent = Intent(applicationContext,Otp::class.java)
                 intent.putExtra("number",storedVerificationId)
+                intent.putExtra("number1",binding.number.text.toString().trim())
                 startActivity(intent)
             }
         }

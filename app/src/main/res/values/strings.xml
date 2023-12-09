@@ -5,7 +5,7 @@
     <string name="m_continue">CONTINUE</string>
     <string name="o_verify_phone">Verify Phone</string>
     <string name="o_code_sent">Code is sent to </string>
-    <string name="o_not_receive">Didn’t receive the code?</string>
+    <string name="o_not_receive">Didn’t receive the code? Request Again</string>
     <string name="o_verify">VERIFY AND CONTINUE</string>
 
 </resources>
