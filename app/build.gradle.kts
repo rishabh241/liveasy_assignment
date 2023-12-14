@@ -58,4 +58,6 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
 
     implementation ("com.github.mukeshsolanki.android-otpview-pinview:otpview:3.1.0")
+
+    implementation ("com.google.android.material:material:1.0.0")
 }

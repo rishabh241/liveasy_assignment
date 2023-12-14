@@ -7,5 +7,6 @@
     <string name="o_code_sent">Code is sent to </string>
     <string name="o_not_receive">Didn’t receive the code? Request Again</string>
     <string name="o_verify">VERIFY AND CONTINUE</string>
+    <string name="ho_text">Please select your profile</string>
 
 </resources>
